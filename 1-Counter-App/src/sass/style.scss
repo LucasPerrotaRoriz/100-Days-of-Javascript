@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+html {
+    font-size: 100%;
+    box-sizing: inherit;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba($color: rgb(60, 54, 54), $alpha: 1.0);
+}
+
+.app {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    @media(max-width: 500px) {
+        min-width: 300px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__counter {
+        font-size: 2.5rem;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.app__btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-block: 2rem;
+    padding-block-start: 2rem;
+    border-top: 1px solid rgb(202, 199, 199);
+
+    @media(max-width: 500px) {
+        flex-direction: column;
+    }
+}
+
+.btn {
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: all .3s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &--sub {
+        padding: .5rem 1rem;
+        background-color: rgb(245, 84, 56);
+
+        &:hover {
+            background-color: rgb(245, 51, 17);
+        }
+    }
+
+    &--reset {
+        padding: .5rem 1.8rem;
+        background-color: rgb(208, 208, 12);
+
+        &:hover {
+            background-color:  rgb(240, 240, 17);
+        }
+    }
+
+    &--add {
+        padding: .5rem 2.5rem;
+        background-color: rgb(48, 204, 48);
+
+        &:hover {
+            background-color: rgb(28, 243, 28);
+        }
+    }
+}
